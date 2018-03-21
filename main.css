@@ -30,3 +30,11 @@ img {
   filter: grayscale(50%);
   -webkit-filter: grayscale(50%);
 }
+
+h2 {
+  padding: 20px;
+}
+
+h3 {
+  padding: 10px;
+}
