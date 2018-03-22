@@ -23,7 +23,7 @@ function compare(){
 
   if (guess < generateNumber){
       answer.innerHTML = "It's a bit higher actually";
-      answer.classList.toggle('red','orange','green', 'purple');
+      answer.classList.toggle('red','orange', 'blue','green', 'purple');
     } else if (guess >= 21) {
       answer.innerHTML = "Um, 1 - 20 innit?";
       answer.classList.toggle('orange','blue','green','purple','red');
