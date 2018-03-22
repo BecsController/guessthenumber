@@ -1,16 +1,12 @@
-document.addEventListener('DOMContentLoaded', guess)
+document.addEventListener('DOMContentLoaded', start)
 
-function guess() {
-    addEventListener()
-}
-function addEventListener() {
+function start() {
 
-var button = document.getElementByClassName("sub")
-    button.addEventListener("click", consider)
-}
-
+var submit = document.getElementById("sub");
 var generateNumber = Math.floor(Math.random() * 20);
+var guess = document.getElementById("guess");
+var answer = document.getElementsByClassName("answer");
 
-function consider(){
+
 
 }
