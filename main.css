@@ -94,3 +94,23 @@ h3 {
 .invisible {
   display: none;
 }
+.red {
+  color: #ff0000;
+  font-weight: bolder;
+}
+.green {
+  color: #33cc33;
+  font-weight: bolder;
+}
+.orange {
+  color: #ff6600;
+  font-weight: bolder;
+}
+.blue {
+  color: #000066;
+  font-weight: bolder;
+}
+.purple {
+  color: #cc99ff;
+  font-weight: bolder;
+}
