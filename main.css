@@ -58,13 +58,14 @@ input {
 }
 
 #reset {
-  margin-left: 20px;
+  margin-left: 120px;
   margin-top: 10px;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   height: 50%;
   font-weight: bold;
-  background-color: #3798f0;
+  background-color: #00e6e6;
+  filter: grayscale(50%);
 }
 
 form {
