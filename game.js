@@ -12,9 +12,7 @@ reset.addEventListener("click", resetGame);
 
 function compare(){
 
-  alert('The number is' + generateNumber);
   var guess = document.forms["guessForm"]["fnumber"].value;
-    alert('Your guess is' + guess);
 
   if (guess < generateNumber){
       answer.innerHTML = "It's a bit higher actually";
