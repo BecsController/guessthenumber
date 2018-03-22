@@ -10,6 +10,13 @@ var reset = document.getElementById("reset");
 submit.addEventListener("click", compare);
 reset.addEventListener("click", resetGame);
 
+var otherSubmit = document.forms["guessForm"]["fnumber"].value;
+otherSubmit.addEventListener("keydown", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+     alert("Click submit!");
+    }
+});
 function compare(){
 
   var guess = document.forms["guessForm"]["fnumber"].value;
@@ -20,7 +27,7 @@ function compare(){
     } else if (guess >= 21) {
       answer.innerHTML = "Um, 1 - 20 innit?";
       answer.classList.toggle('orange','blue','green','purple','red');
-    } else if (guess.length == 0){
+    } else if (isNaN (guess)){
       answer.innerHTML = "Aw, c,mon guess!";
       answer.classList.toggle('blue','green','purple','red','orange');
     } else if (guess > generateNumber){
