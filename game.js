@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', start)
 
-var generateNumber = Math.floor(Math.random() * 20) + 1;
-
-
 function start() {
 
+var generateNumber = Math.floor(Math.random() * 20) + 1;
 var answer = document.getElementById("answer");
 var submit = document.getElementById("sub");
 var reset = document.getElementById("reset");
@@ -14,29 +12,27 @@ reset.addEventListener("click", resetGame);
 
 function compare(){
 
-  alert(generateNumber);
-var guess = document.forms["guessForm"]["fnumber"].value;
-    alert(guess);
+  alert('The number is' + generateNumber);
+  var guess = document.forms["guessForm"]["fnumber"].value;
+    alert('Your guess is' + guess);
 
-if (guess < generateNumber){
-  answer.innerHTML = "It's a bit higher actually";
-} else if (guess >= 21) {
-  answer.innerHTML = "Um, 1 - 20 innit?";
-} else if (guess < 1){
-  answer.innerHTML = "Um, 1 - 20 innit?";
-} else if (guess > generateNumber){
-  answer.innerHTML = "It's a bit lower actually";
-} else if (guess == generateNumber) {
-  answer.innerHTML = "Spot on! You're psychic!";
-  reset.classList.toggle("invisible");
-}
+  if (guess < generateNumber){
+      answer.innerHTML = "It's a bit higher actually";
+    } else if (guess >= 21) {
+      answer.innerHTML = "Um, 1 - 20 innit?";
+    } else if (guess < 1){
+      answer.innerHTML = "Um, 1 - 20 innit?";
+    } else if (guess > generateNumber){
+      answer.innerHTML = "It's a bit lower actually";
+    } else if (guess == generateNumber) {
+      answer.innerHTML = "Spot on! You're psychic!";
+      reset.classList.toggle("invisible"); //toggle button on
+    }
   }; //end compare function
-
 }; //end start function
 
 function resetGame(){
-  reset.classList.toggle("invisible");
-  var generateNumber = Math.floor(Math.random() * 20) + 1;
-  document.forms["guessForm"]["fnumber"].value = "";
-  start()
+  reset.classList.toggle("invisible"); //toggle button off
+  document.forms["guessForm"]["fnumber"].value = "";  //wipe form
+  location.reload(); //refresh browser
 };
