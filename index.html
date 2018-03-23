@@ -24,9 +24,9 @@
         <button id="reset" class="invisible" type="button">Play Again?</button>
       </div>
       <div class="row no-gutters">
-        <form name="guessForm">
+        <form name="guessForm" onsubmit="return false">
           <input id="guess" type="text" name="fnumber">
-          <button id="sub" type="button">Submit</button>
+          <input id="sub" type="submit" value="Submit">
         </form>
       </div>
     </div> <!--container close-->
